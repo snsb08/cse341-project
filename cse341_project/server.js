@@ -23,4 +23,4 @@ mongodb.initDb((err) => {
     app.listen(port);
     console.log(`Connected to data and running on port ${port}`);
   }
-}); 
+});  
