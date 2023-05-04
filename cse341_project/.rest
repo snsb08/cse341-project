@@ -1,0 +1,40 @@
+GET http://localhost:3041/books HTTP/1.1
+
+
+###
+GET http://localhost:3041/api-docs HTTP/1.1
+
+###
+POST  http://localhost:3041/books HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Left to Tell",
+    "author": "Immaculee Illibagiza, Steven Erwin",
+    "genre": "Biography",
+    "finishedReading": "2018"
+}
+
+###
+DELETE  http://localhost:3041/books/645329925449e0931ef7b9f6 HTTP/1.1
+
+
+###Book Series
+GET http://localhost:3041/book-series HTTP/1.1
+
+###
+POST http://localhost:3041/book-series HTTP/1.1
+Content-Type: application/json
+
+
+{   
+    "title": "The Hunger Games",
+    "author": "Suzanne Collins",
+    "genre": "Science Fiction, Dystopian",
+    "numberOfBooks": "3",
+    "published": "2008-2010",
+    "finishedReading": "2011"
+}
+
+###
+DELETE  http://localhost:3041/book-series/64532cdbebc6d3431d2f1700 HTTP/1.1

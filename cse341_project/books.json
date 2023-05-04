@@ -1,0 +1,121 @@
+[{
+  "_id": {
+    "$oid": "645167a6a96238afedcf1e52"
+  },
+  "title": "The Hobbit",
+  "author(s)": "Tolkien",
+  "genre": "Fantasy",
+  "finished reading": "12/22"
+},{
+  "_id": {
+    "$oid": "64516a6ca96238afedcf1e53"
+  },
+  "title": "The Last Bookshop in London",
+  "author(s)": "Madeline Martin",
+  "genre": "Historical Fiction",
+  "finished reading": "10/22"
+},{
+  "_id": {
+    "$oid": "64516af9a96238afedcf1e54"
+  },
+  "title": "To Kill a Mockinbird",
+  "author(s)": "Lee Harper",
+  "genre": "Southern Gothic Fiction",
+  "finished reading": "04/23"
+},{
+  "_id": {
+    "$oid": "64516b79a96238afedcf1e55"
+  },
+  "title": "Just Mercy",
+  "author(s)": "Bryan Stevenson",
+  "genre": "Memoir, Legal Drama",
+  "finished reading": "02/23"
+},{
+  "_id": {
+    "$oid": "64516be2a96238afedcf1e56"
+  },
+  "title": "The Last Christmas in Paris",
+  "author(s)": "Hazel Gaynor and Heather Webb",
+  "genre": "Historical Fiction",
+  "finished reading": "01/23"
+},{
+  "_id": {
+    "$oid": "64516c1aa96238afedcf1e57"
+  },
+  "title": "Moloka'i",
+  "author(s)": "Alan Brennert",
+  "genre": "Historical Fiction",
+  "finished reading": "03/23"
+},{
+  "_id": {
+    "$oid": "64516c91a96238afedcf1e58"
+  },
+  "title": "A Midsummer Night's Dream",
+  "author(s)": "William Shakespeare",
+  "genre": "Comedy, Fantasy",
+  "finished reading": "07/22"
+},{
+  "_id": {
+    "$oid": "64516cf9a96238afedcf1e59"
+  },
+  "title": "The Screwtape Letters",
+  "author(s)": "C.S. Lewis",
+  "genre": "Epistolary Novel",
+  "finished reading": "04/22"
+},{
+  "_id": {
+    "$oid": "64516d64a96238afedcf1e5a"
+  },
+  "title": "The Stranger in the Lifeboat",
+  "author(s)": "Mitch Albom",
+  "genre": "Religious Fiction",
+  "finished reading": "03/22"
+},{
+  "_id": {
+    "$oid": "64516db9a96238afedcf1e5b"
+  },
+  "title": "Lovely War",
+  "author(s)": "Julie Berry",
+  "genre": "Fantasy, Historical Fiction",
+  "finished reading": "02/22"
+},{
+  "_id": {
+    "$oid": "64516e0ea96238afedcf1e5c"
+  },
+  "title": "Pride and Prejudice",
+  "author(s)": "Jane Austen",
+  "genre": "Romance",
+  "finished reading": "11/21"
+},{
+  "_id": {
+    "$oid": "64516e4ca96238afedcf1e5d"
+  },
+  "title": "Essentialism",
+  "author(s)": "Greg McKeown",
+  "genre": "Self-help",
+  "finished reading": "11/21"
+},{
+  "_id": {
+    "$oid": "64516eafa96238afedcf1e5e"
+  },
+  "title": "Gift from the Sea",
+  "author(s)": "Anne Morrow Lindbergh",
+  "genre": "Biography",
+  "finished reading": "10/21"
+},{
+  "_id": {
+    "$oid": "64516f1fa96238afedcf1e5f"
+  },
+  "title": "The Book of Joy",
+  "author(s)": "Dalai Lama, XIV, Desmond Tutu, Douglas Abrams",
+  "genre": "Self-Help",
+  "finished reading": "09/21"
+},{
+  "_id": {
+    "$oid": "64517009a96238afedcf1e60"
+  },
+  "title": "Code Name Verity",
+  "author(s)": "Elizabeth Wein",
+  "genre": "Historical Fiction",
+  "finished reading": "still reading"
+}]
