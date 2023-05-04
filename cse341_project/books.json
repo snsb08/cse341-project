@@ -23,7 +23,7 @@
   "genre": "Southern Gothic Fiction",
   "finished reading": "04/23"
 },{
-  "_id": {
+  "_id": { 
     "$oid": "64516b79a96238afedcf1e55"
   },
   "title": "Just Mercy",
