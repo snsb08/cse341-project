@@ -1,0 +1,37 @@
+[{
+    "Title": "Harry Potter",
+    "Author(s)": "J.K. Rowling",
+    "Genre": "Fantasy",
+    "Number of Books": "7",
+    "Published":"1997-2007",
+    "Finished Reading": "07/2007"
+  },{
+    "Title": "Twilight",
+    "Author(s)": "Stephenie Meyer",
+    "Genre": "Fantasy Romance",
+    "Number of Books": "4",
+    "Published":"2005-2008",
+    "Finished Reading": "2009"
+  },{
+    "Title": "Mistborn (Era 1)",
+    "Author(s)": "Brandon Sanderson",
+    "Genre": "Fantasy",
+    "Number of Books": "3",
+    "Published":"2006-2008",
+    "Finished Reading": "2010"
+  },{
+    "Title": "The Inheritance Cycle (Eragon)",
+    "Author(s)": "Christopher Paolini",
+    "Genre": "Fantasy",
+    "Number of Books": "4",
+    "Published":"2002-2011",
+    "Finished Reading": "2011" 
+  },{
+    "Title": "The Hunger Games",
+    "Author(s)": "Suzanne Collins",
+    "Genre": "Science Fiction, Dystopian",
+    "Number of Books": "3",
+    "Published":"2008-2010",
+    "Finished Reading": "2011"
+  }
+]  
