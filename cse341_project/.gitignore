@@ -1,2 +1,4 @@
 node_modules
 .env
+validate-schema.js
+joi-validation.js

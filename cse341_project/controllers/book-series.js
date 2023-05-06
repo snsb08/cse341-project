@@ -2,8 +2,8 @@ const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
 
-
 const allBookSeries = async (req, res) => {
+  
   const result = await mongodb.getDb().db().collection('book-series').find();
   result.toArray().then((lists) => {
     res.setHeader('Content-Type', 'application/json');
@@ -12,6 +12,9 @@ const allBookSeries = async (req, res) => {
 };
 
 const singleBookSeries = async (req, res) => {
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Please insert a valid book series id.')
+  }
   const userId = new ObjectId(req.params.id);
   const result = await mongodb.getDb().db().collection('book-series').find({ _id: userId });
   result.toArray().then((lists) => {
@@ -21,6 +24,7 @@ const singleBookSeries = async (req, res) => {
 };
 
 const newBookSeries = async (req, res) => {
+
   const bookSeries = {
     title: req.body.title,
     author: req.body.author,
@@ -29,6 +33,7 @@ const newBookSeries = async (req, res) => {
     published: req.body.published,
     finishedReading: req.body.finishedReading   
 };
+
   const result = await mongodb.getDb().db().collection('book-series').insertOne(bookSeries);
   if (result) {
     res.setHeader('Content-Type', 'application/json');
@@ -44,6 +49,9 @@ const newBookSeries = async (req, res) => {
 };
 
 const updateBookSeries = async (req, res) => {
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Please insert a valid book series id to update.')
+  }
   const userId = new ObjectId({ id: req.params.id });
   const bookSeries = {
     title: req.body.title,
@@ -71,6 +79,9 @@ const updateBookSeries = async (req, res) => {
 };
 
 const deleteBookSeries = async (req, res) => {
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Please insert a valid book series id to delete.')
+  }
   const userId = new ObjectId({ id: req.params.id });
   const bookSeries = {
     title: req.body.title,

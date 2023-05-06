@@ -16,7 +16,7 @@ Content-Type: application/json
 }
 
 ###
-DELETE  http://localhost:3041/books/645329925449e0931ef7b9f6 HTTP/1.1
+DELETE  http://localhost:3041/books/645636d8e16d7c0f34c7896c HTTP/1.1
 
 
 ###Book Series
@@ -37,6 +37,12 @@ Content-Type: application/json
 }
 
 ###
-DELETE  http://localhost:3041/book-series/64532cdbebc6d3431d2f1700 HTTP/1.1
+DELETE  http://localhost:3041/book-series/64532b405449e0931ef7b9f7 HTTP/1.1
 
 
+
+###
+GET https://cse341-project-12or.onrender.com/book-series HTTP/1.1
+
+###
+GET https://cse341-project-12or.onrender.com/books HTTP/1.1

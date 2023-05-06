@@ -5,6 +5,8 @@ const app = express();
 
 const port = process.env.PORT || 3041;
 
+const fs = require('node:fs');
+
 app
     .use('/', bodyParser.json())
     .use((req, res, next) => {
@@ -15,6 +17,13 @@ app
         next();
     })
     .use('/', require('./routes'));
+
+process.on('uncaughtException',(err, origin) => {
+  fs.writeSync(process.stderr.fd,
+    `Caught exception: ${err}` +
+    `Exception origin: ${origin}`,
+    );
+});
 
 mongodb.initDb((err) => {
   if (err) {

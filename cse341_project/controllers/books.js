@@ -12,6 +12,9 @@ const allBooks = async (req, res) => {
 };
 
 const singleBook = async (req, res) => {
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Please insert a valid book id.')
+  }
   const userId = new ObjectId(req.params.id);
   const result = await mongodb.getDb().db().collection('books').find({ _id: userId });
   result.toArray().then((lists) => {
@@ -42,6 +45,9 @@ const newBook = async (req, res) => {
 };
 
 const updateBook = async (req, res) => {
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Please insert a valid book id to update.')
+  }
   const userId = new ObjectId({ id: req.params.id });
   const book = {
     title: req.body.title,
@@ -67,6 +73,9 @@ const updateBook = async (req, res) => {
 };
 
 const deleteBook = async (req, res) => {
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Please insert a valid book id to delete.')
+  }
   const userId = new ObjectId({ id: req.params.id });
   const book = {
     title: req.body.title,
