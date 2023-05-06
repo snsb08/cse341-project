@@ -5,7 +5,7 @@ const app = express();
 
 const port = process.env.PORT || 3041;
 
-const fs = require('node:fs');
+// const fs = require('node:fs');
 
 app
     .use('/', bodyParser.json())
@@ -19,7 +19,7 @@ app
     .use('/', require('./routes'));
 
 process.on('uncaughtException',(err, origin) => {
-  fs.writeSync(process.stderr.fd,
+  console.log(process.stderr.fd,
     `Caught exception: ${err}` +
     `Exception origin: ${origin}`,
     );
