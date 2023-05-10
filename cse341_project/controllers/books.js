@@ -31,7 +31,7 @@ const newBook = async (req, res) => {
     finishedReading: req.body.finishedReading   
   };
   const result = await mongodb.getDb().db().collection('books').insertOne(book);
-  if (result) {
+  if (result.acknowledged) {
     res.setHeader('Content-Type', 'application/json');
     res.status(201).json({
       message: 'Book added succesfully',
