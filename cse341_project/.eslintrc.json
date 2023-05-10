@@ -1,15 +1,12 @@
 {
-    "env": {
-        "es2021": true,
-        "node": true
-    },
-    "extends": "eslint:recommended",
-    "overrides": [
-    ],
-    "parserOptions": {
-        "ecmaVersion": "latest"
-    },
-    "rules": {
-    }
+  "env": {
+    "es2021": true,
+    "node": true
+  },
+  "extends": "eslint:recommended",
+  "overrides": [],
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "rules": {}
 }
-

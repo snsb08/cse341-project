@@ -2,9 +2,7 @@ const router = require('express').Router();
 
 const controller = require('../controllers/book-series');
 const validation = require('../middleware/validate');
-const {isAuthenticated} = require('../middleware/authenticate');
-
-
+const { isAuthenticated } = require('../middleware/authenticate');
 
 router.get('/', controller.allBookSeries);
 router.get('/:id', controller.singleBookSeries);
@@ -13,8 +11,6 @@ router.put('/:id', isAuthenticated, validation.saveBookSeries, controller.update
 router.delete('/:id', isAuthenticated, controller.deleteBookSeries);
 
 module.exports = router;
-
-
 
 //testing Joi
 // const validation = require('../middleware/joi-validation');
