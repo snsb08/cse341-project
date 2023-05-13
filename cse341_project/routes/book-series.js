@@ -10,6 +10,10 @@ router.post('/', isAuthenticated, validation.saveBookSeries, controller.newBookS
 router.put('/:id', isAuthenticated, validation.saveBookSeries, controller.updateBookSeries);
 router.delete('/:id', isAuthenticated, controller.deleteBookSeries);
 
+// router.post('/', validation.saveBookSeries, controller.newBookSeries);
+// router.put('/:id', validation.saveBookSeries, controller.updateBookSeries);
+// router.delete('/:id', controller.deleteBookSeries);
+
 module.exports = router;
 
 //testing Joi

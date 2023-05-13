@@ -9,32 +9,28 @@ const cors = require('cors');
 
 const port = process.env.PORT || 3041;
 
-// const fs = require('node:fs');
 
 app
-  .use('/', require('./routes'))
   .use('/', bodyParser.json())
-  .use(
-    session({
+  .use(session({
       secret: 'secret',
       resave: false,
-      saveUninitialized: true
-    })
-  )
+      saveUninitialized: true,
+    }))
   .use(passport.initialize())
   .use(passport.session())
   .use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-    res.setHeader('Content-Type', 'application/json');
+    res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Z-Key, Authorization');
+    // res.setHeader('Content-Type', 'application/json');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
     next();
   })
   .use(cors({ methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH'] }))
-  .use(cors({ origin: '*' }));
+  .use(cors({ origin: '*' }))
+  .use('/', require('./routes/index.js'));
 
-passport.use(
-  new GitHubStrategy(
+passport.use(new GitHubStrategy(
     {
       clientID: process.env.GITHUB_CLIENT_ID,
       clientSecret: process.env.GITHUB_CLIENT_SECRET,
@@ -54,11 +50,7 @@ passport.deserializeUser((user, done) => {
   done(null, user);
 });
 
-app.get('/', (req, res) => {
-  res.send(
-    req.session.user !== undefined ? `Logged in as ${req.session.user.displayName}` : 'Logged Out'
-  );
-});
+app.get('/', (req, res) => { res.send(req.session.user !== undefined ? `Logged in as ${req.session.user.displayName}` : 'Logged Out')});
 
 app.get(
   '/github/callback',
@@ -72,9 +64,9 @@ app.get(
   }
 );
 
-process.on('uncaughtException', (err, origin) => {
-  console.log(process.stderr.fd, `Caught exception: ${err}` + `Exception origin: ${origin}`);
-});
+// process.on('uncaughtException', (err, origin) => {
+//   console.log(process.stderr.fd, `Caught exception: ${err}` + `Exception origin: ${origin}`);
+// });
 
 mongodb.initDb((err) => {
   if (err) {
